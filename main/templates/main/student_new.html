@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+{% load staticfiles %}
+{% block head %}
+   
+{% endblock head %}
+{% block body %}
+  <form action="{% url 'student_new' %}" method="post">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <input type="submit">
+  </form> 
+{% endblock body %}
+{% block js-end %}
+  
+{% endblock js-end %}
